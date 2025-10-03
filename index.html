@@ -1,77 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
-  <title>Equipo Colaborativo</title>
-  <meta name="description" content="Proyecto en equipo con HTML5 y CSS accesible, optimizado para SEO y colaborativo.">
-
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Departamentos de Bolivia - Panel</title>
+<meta name="description" content="Explora los departamentos de Bolivia: comida típica, danzas y su historia en un sitio web accesible y optimizado.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Link de salto -->
-  <a href="#principal" class="skip-link">Ir al contenido principal</a>
+<a href="#principal" class="skip-link">Saltar al contenido principal</a>
 
-  <!-- Cabecera -->
-  <header role="banner">
-    <div class="logo">
-      <h1>Equipo Colaborativo</h1>
-    </div>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="#quienes">Quiénes somos</a></li>
-        <li><a href="#proyecto">Proyecto</a></li>
-        <li><a href="#equipo">Nuestro equipo</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<header role="banner">
+  <h1>Departamentos de Bolivia</h1>
+  <nav aria-label="Navegación principal">
+    <ul>
+      <li><a href="#equipo">Nuestro equipo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="principal" role="main">
+  <!-- Menú lateral -->
+  <nav class="grid-deptos" aria-label="Departamentos de Bolivia">
+    <a href="#la-paz">La Paz</a>
+    <a href="#santa-cruz">Santa Cruz</a>
+    <a href="#cochabamba">Cochabamba</a>
+    <a href="#oruro">Oruro</a>
+    <a href="#potosi">Potosí</a>
+    <a href="#chuquisaca">Chuquisaca</a>
+    <a href="#tarija">Tarija</a>
+    <a href="#beni">Beni</a>
+    <a href="#pando">Pando</a>
+  </nav>
 
-  <!-- Contenido principal -->
-  <main id="principal" role="main">
-    <section id="quienes">
-      <h2>Quiénes somos</h2>
-      <p>Somos un grupo de seis estudiantes trabajando juntos para crear un sitio web accesible y optimizado.</p>
+  <div class="content">
+    <section id="la-paz" class="dept-info">
+      <h2>La Paz</h2>
+      <article>
+        <p><strong>Comida típica:</strong> Fricasé paceño, plato paceño.</p>
+        <p><strong>Danza típica:</strong> Morenada.</p>
+        <p><strong>Historia:</strong> Fundada en 1548, sede de gobierno y capital administrativa de Bolivia.</p>
+        <img src="imagenes/la-paz.png" alt="Departamento de La Paz" class="centrar-img">
+      </article>
     </section>
-
-    <section id="proyecto">
-      <h2>Sobre el proyecto</h2>
-      <p>Este proyecto busca aplicar buenas prácticas de HTML5, SEO y accesibilidad sin usar JavaScript.</p>
-      <figure>
-        <img src="ejemplo-proyecto.jpg" alt="Vista previa del sitio colaborativo" width="400">
-        <figcaption>Ejemplo de diseño accesible.</figcaption>
-      </figure>
+  
+    <section id="santa-cruz" class="dept-info">
+      <h2>Santa Cruz</h2>
+      <article>
+        <p><strong>Comida típica:</strong> Majadito, locro de gallina.</p>
+        <p><strong>Danza típica:</strong> Taquirari.</p>
+        <p><strong>Historia:</strong> Fundada en 1561, región más poblada y motor económico del país.</p>
+        <img src="imagenes/santa-cruz.png" alt="Departamento de Santa Cruz" class="centrar-img">
+      </article>
     </section>
+  
+    <section id="cochabamba" class="dept-info">
+      <h2>Cochabamba</h2>
+      <article>
+        <p><strong>Comida típica:</strong> Silpancho, pique macho.</p>
+        <p><strong>Danza típica:</strong> Cueca cochabambina.</p>
+        <p><strong>Historia:</strong> Fundada en 1571, conocida como la “ciudad jardín”.</p>
+        <img src="imagenes/cochabamba.png" alt="Departamento de Cochabamba" class="centrar-img">
+      </article>
+    </section>
+  
+    <section id="oruro" class="dept-info">
+      <h2>Oruro</h2>
+      <article>
+        <p><strong>Comida típica:</strong> Charquekan orureño.</p>
+        <p><strong>Danza típica:</strong> Diablada.</p>
+        <p><strong>Historia:</strong> Famosa por su carnaval declarado Patrimonio de la Humanidad por la UNESCO.</p>
+        <img src="imagenes/oruro.png" alt="Departamento de Oruro" class="centrar-img">
+      </article>
+    </section>
+  
+    <section id="potosi" class="dept-info">
+      <h2>Potosí</h2>
+      <article>
+        <p><strong>Comida típica:</strong> Kalapurka, k’ajcha.</p>
+        <p><strong>Danza típica:</strong> Tinku.</p>
+        <p><strong>Historia:</strong> Su Cerro Rico fue uno de los centros mineros más importantes de América.</p>
+        <img src="imagenes/potosi.png" alt="Departamento de Potosí" class="centrar-img">
+      </article>
+    </section>
+  
+    <section id="chuquisaca" class="dept-info">
+      <h2>Chuquisaca</h2>
+      <article>
+        <p><strong>Comida típica:</strong> Mondongo chuquisaqueño.</p>
+        <p><strong>Danza típica:</strong> Cueca chuquisaqueña.</p>
+        <p><strong>Historia:</strong> Sucre es la capital constitucional e histórica de Bolivia.</p>
+        <img src="imagenes/chuquisaca.png" alt="Departamento de Chuquisaca" class="centrar-img">
+      </article>
+    </section>
+  
+    <section id="tarija" class="dept-info">
+      <h2>Tarija</h2>
+      <article>
+        <p><strong>Comida típica:</strong> Saice tarijeño.</p>
+        <p><strong>Danza típica:</strong> Cueca chapaca.</p>
+        <p><strong>Historia:</strong> Reconocida por sus viñedos y tradición vitivinícola.</p>
+        <img src="imagenes/tarija.png" alt="Departamento de Tarija" class="centrar-img">
+      </article>
+    </section>
+  
+    <section id="beni" class="dept-info">
+      <h2>Beni</h2>
+      <article>
+        <p><strong>Comida típica:</strong> Pescado a la tacuara.</p>
+        <p><strong>Danza típica:</strong> Macheteros.</p>
+        <p><strong>Historia:</strong> Región amazónica rica en biodiversidad.</p>
+        <img src="imagenes/beni.png" alt="Departamento de Beni" class="centrar-img">
+      </article>
+    </section>
+  
+    <section id="pando" class="dept-info">
+      <h2>Pando</h2>
+      <article>
+        <p><strong>Comida típica:</strong> Masaco de plátano.</p>
+        <p><strong>Danza típica:</strong> Danza de la selva.</p>
+        <p><strong>Historia:</strong> Departamento amazónico joven, creado en 1938.</p>
+        <img src="imagenes/pando.png" alt="Departamento de Pando" class="centrar-img">
+      </article>
+    </section>
+  
+  
+    
 
-    <section id="equipo">
+    <!-- Nuestro equipo -->
+    <section id="equipo" class="dept-info">
       <h2>Nuestro equipo</h2>
-      <ul>
-        <li><strong>Limberth Cruz Canaviri:</strong> Repositorio y entrega</li>
-        <li><strong>Integrante 2:</strong> Encargado de estructura semántica</li>
-        <li><strong>Integrante 3:</strong> SEO y metadatos</li>
-        <li><strong>Integrante 4:</strong> Accesibilidad</li>
-        <li><strong>Integrante 5:</strong> Estilos CSS</li>
-        <li><strong>Integrante 6:</strong> Documentación</li>
-
-      </ul>
+      <article>
+        <ul>
+          <li>Limberth Cruz Canaviri: Repositorio y entrega</li>
+          <li>Integrante 2: Estructura semántica</li>
+          <li>Integrante 3: SEO y metadatos</li>
+          <li>Integrante 4: Accesibilidad</li>
+          <li>Integrante 5: Estilos CSS</li>
+        </ul>
+      </article>
     </section>
 
-    <section id="contacto">
-      <h2>Contáctanos</h2>
-      <form>
-        <label for="mensaje">Tu mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-
-        <button type="submit">Enviar</button>
-      </form>
+    <!-- Contacto -->
+    <section id="contacto" class="dept-info">
+      <h2>Contacto</h2>
+      <article>
+        <form>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </article>
     </section>
-  </main>
+  </div>
 
-  <!-- Pie de página -->
-  <footer role="contentinfo">
-    <p>&copy; 2025 Equipo Colaborativo - Proyecto académico</p>
-  </footer>
+
+  
+</main>
+
+<footer role="contentinfo">
+  <p>&copy; 2025 Proyecto colaborativo</p>
+</footer>
 </body>
 </html>

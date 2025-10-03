@@ -1,97 +1,238 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Verdana, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    background: #f9f9f9;
-  }
-  
-  /* Link de salto */
-  .skip-link {
-    position: absolute;
-    left: -999px;
-    top: auto;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-  }
-  .skip-link:focus {
-    left: 10px;
-    top: 10px;
-  }
-  
-  /* Header */
-  header {
-    background: #005f73;
-    color: white;
-    padding: 1rem;
-  }
-  header h1 {
-    margin-bottom: 0.5rem;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-  nav a:focus, nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Main */
+ /* Centrar imagen dentro del artículo */
+ .centrar-img {
+  display: block;       /* convierte la imagen en bloque para poder centrarla */
+  margin: 1rem auto;    /* margen automático a izquierda y derecha */
+  max-width: 400px;     /* opcional: limita tamaño */
+  width: 100%;          /* opcional: que sea responsive */
+  border-radius: 8px;   /* opcional: bordes redondeados */
+}
+
+/* Sección Nuestro equipo moderna */
+#equipo {
+  text-align: center;
+}
+
+#equipo h2 {
+  color: #00796b;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+#equipo article ul {
+  list-style: none; /* quitar puntos */
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem; /* separación entre tarjetas */
+}
+
+#equipo article ul li {
+  background: #e0f7f5;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  flex: 1 1 200px; /* adaptable a tamaño de pantalla */
+  max-width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-weight: 500;
+  color: #004d40;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#equipo article ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+
+
+/* Sección Contacto */
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contacto label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+#contacto input,
+#contacto textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#contacto button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+#contacto button:hover,
+#contacto button:focus {
+  background-color: #004d40;
+}
+
+  /* Reset mínimo */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: #f0f2f5;
+  color: #222;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Header fijo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #004d40;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  z-index: 100;
+}
+header h1 {
+  margin-bottom: 0.5rem;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1.5rem;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav a:hover,
+header nav a:focus {
+  text-decoration: underline;
+}
+
+/* Layout principal */
+main {
+  display: flex;
+  max-width: 1200px;
+  margin: 120px auto 2rem auto; /* espacio por header */
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Menú lateral */
+nav.grid-deptos {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+nav.grid-deptos a {
+  display: block;
+  padding: 0.8rem 1rem;
+  background: #00796b;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+nav.grid-deptos a:hover,
+nav.grid-deptos a:focus {
+  background: #004d40;
+}
+
+/* Contenido central */
+.content {
+  flex: 1;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  min-height: 300px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Ocultar todos los departamentos */
+.dept-info {
+  display: none;
+}
+
+/* Mostrar el departamento seleccionado usando :target */
+.dept-info:target {
+  display: block;
+}
+
+/* Opcional: mensaje inicial antes de seleccionar un departamento */
+.dept-info.inicio {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  color: #555;
+}
+
+/* Compensar scroll por header */
+.dept-info::before {
+  content: "";
+  display: block;
+  height: 120px; /* igual que el header */
+  margin-top: -120px;
+  visibility: hidden;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #004d40;
+}
+article p {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #004d40;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   main {
-    padding: 1.5rem;
+    flex-direction: column;
   }
-  section {
-    margin-bottom: 2rem;
+  nav.grid-deptos {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  h2 {
-    color: #0a9396;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Formularios */
-  form {
-    max-width: 400px;
-  }
-  textarea, button {
-    width: 100%;
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-  }
-  button {
-    background: #005f73;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  button:focus, button:hover {
-    background: #0a9396;
-  }
-  
-  /* Footer */
-  footer {
-    background: #e9ecef;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  
-  /* Responsive */
-  @media (min-width: 600px) {
-    nav ul {
-      justify-content: center;
-    }
-  }
-  
+}
