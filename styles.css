@@ -1,4 +1,19 @@
- /* Centrar imagen dentro del artículo */
+/* Ocultar todos los departamentos */
+.dept-info {
+  display: none;
+}
+
+/* Mostrar el departamento seleccionado */
+.dept-info:target {
+  display: block;
+}
+
+/* Mostrar La Paz por defecto al cargar la página */
+body:not(:has(:target)) #la-paz {
+  display: block;
+}
+
+/* Centrar imagen dentro del artículo */
  .centrar-img {
   display: block;       /* convierte la imagen en bloque para poder centrarla */
   margin: 1rem auto;    /* margen automático a izquierda y derecha */
