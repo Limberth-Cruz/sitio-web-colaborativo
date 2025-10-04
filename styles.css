@@ -13,13 +13,36 @@ body:not(:has(:target)) #la-paz {
   display: block;
 }
 
-/* Centrar imagen dentro del artículo */
- .centrar-img {
-  display: block;       /* convierte la imagen en bloque para poder centrarla */
-  margin: 1rem auto;    /* margen automático a izquierda y derecha */
-  max-width: 400px;     /* opcional: limita tamaño */
-  width: 100%;          /* opcional: que sea responsive */
-  border-radius: 8px;   /* opcional: bordes redondeados */
+/* Centrar imagen o grupo de imágenes dentro del artículo usando Flexbox */
+.centrar-img {
+  display: flex !important;
+  justify-content: center;
+  align-items: center; /* Cambiado a 'center' para centrar verticalmente si tienen alturas ligeramente distintas */
+  gap: 1.5rem;
+  margin: 1rem auto;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+/* Estilos para las imágenes individuales dentro de un contenedor .centrar-img */
+.centrar-img img { /* Aplica estos estilos a CUALQUIER img dentro de un .centrar-img */
+  display: block;
+  /* Eliminamos el max-width porcentual aquí y en su lugar controlamos el tamaño absoluto o máximo */
+  max-width: 300px; /* **NUEVO:** Define un ancho máximo para cada imagen (ajusta este valor) */
+  height: 200px; /* **NUEVO:** Define una altura fija para cada imagen */
+  object-fit: cover; /* **NUEVO:** Recorta la imagen para que se ajuste a las dimensiones sin distorsionarse */
+  width: auto; /* Permite que el ancho se ajuste proporcionalmente a la altura o al max-width */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query para ajustar el tamaño de las imágenes individuales en pantallas muy pequeñas */
+@media (max-width: 768px) {
+  .centrar-img img {
+    max-width: 90%; /* En pantallas más pequeñas, que cada imagen ocupe casi todo el ancho */
+    height: auto; /* Permite que la altura se ajuste proporcionalmente para responsividad */
+    object-fit: contain; /* Ajusta la imagen dentro de su contenedor sin recortar */
+  }
 }
 
 /* Sección Nuestro equipo moderna */
@@ -250,13 +273,4 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
-}
-
-/* Centrar imagen dentro del artículo */
- .comida-img {
-  display: block;       /* convierte la imagen en bloque para poder centrarla */
-  margin: 1rem auto;    /* margen automático a izquierda y derecha */
-  max-width: 400px;     /* opcional: limita tamaño */
-  width: 100%;          /* opcional: que sea responsive */
-  border-radius: 8px;   /* opcional: bordes redondeados */
 }
