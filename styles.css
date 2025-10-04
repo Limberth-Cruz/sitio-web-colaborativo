@@ -251,3 +251,12 @@ footer {
     justify-content: center;
   }
 }
+
+/* Centrar imagen dentro del artículo */
+ .comida-img {
+  display: block;       /* convierte la imagen en bloque para poder centrarla */
+  margin: 1rem auto;    /* margen automático a izquierda y derecha */
+  max-width: 400px;     /* opcional: limita tamaño */
+  width: 100%;          /* opcional: que sea responsive */
+  border-radius: 8px;   /* opcional: bordes redondeados */
+}
