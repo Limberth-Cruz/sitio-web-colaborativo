@@ -21,7 +21,8 @@ body:not(:has(:target)) #la-paz {
   gap: 1.5rem;
   margin: 1rem auto;
   flex-wrap: wrap;
-  max-width: 100%;
+  border-radius: 8px;
+  max-width: 70%;
 }
 
 /* Estilos para las imágenes individuales dentro de un contenedor .centrar-img */
