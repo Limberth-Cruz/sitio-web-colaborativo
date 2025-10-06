@@ -83,6 +83,24 @@ body:not(:has(:target)) #la-paz {
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
+/* SECCION PANDO Para dar un aire más “selvático” a la sección Pando */
+#pando {
+  background: linear-gradient(to bottom, #f0fff4 0%, #e6fffa 100%);
+  border-left: 6px solid #2f7d32; /* verde selva */
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+}
+
+#pando h2 {
+  color: #1b5e20;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+}
+
+#pando img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
 
 
 /* Sección Contacto */
